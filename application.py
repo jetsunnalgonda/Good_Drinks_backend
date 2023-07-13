@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, jsonify, request, send_from_directory, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask import send_file
 from socket import gethostname
@@ -25,6 +25,10 @@ def create_table():
     conn.commit()
     conn.close()
 
+
+@app.route('/', methods=['GET'])
+def index():
+    return render_template('index.html')
 
 # Get all drinks
 @app.route('/api/drinks', methods=['GET'])
