@@ -19,4 +19,11 @@ HELLO_WORLD = """<html>
 # if path not in sys.path:
 #     sys.path.insert(0, path)
 
-from application import app as application
+# from application import app as application
+
+from application import app
+
+if __name__ == '__main__':
+    app.run()
+
+application = app  # Gunicorn entry point
