@@ -6,11 +6,11 @@ import sqlite3
 import random
 import os
 
-app = Flask(__name__)
-# DATABASE = 'drinks.db'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///drinks.db'
-db = SQLAlchemy(app)
-DATABASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'drinks.db')
+app = Flask(__name__, template_folder = 'templates')
+DATABASE = 'drinks.db'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///drinks.db'
+# db = SQLAlchemy(app)
+# DATABASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'drinks.db')
 
 # Create drinks table in the database
 def create_table():
