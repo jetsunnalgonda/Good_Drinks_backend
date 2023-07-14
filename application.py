@@ -41,6 +41,39 @@ def get_all_drinks():
     drinks = [{'id': row[0], 'name': row[1], 'ingredients': row[2], 'glass': row[3], 'instructions': row[4]} for row in rows]
     return jsonify(drinks)
 
+# Get the featured drinks
+@app.route('/api/drinks/featured', methods=['GET'])
+def get_featured_drinks():
+    # Sample array of featured drink IDs
+    featured_drink_ids = [15, 16, 17, 20, 30, 7, 8, 11]  # Replace with your actual featured drink IDs
+
+    # Connect to the database
+    conn = sqlite3.connect(DATABASE)
+    c = conn.cursor()
+
+    # Retrieve the featured drinks based on their IDs
+    featured_drinks = []
+    for drink_id in featured_drink_ids:
+        c.execute("SELECT * FROM drinks WHERE id=?", (drink_id,))
+        row = c.fetchone()
+        if row:
+            # Create a dictionary representing the drink and add it to the list
+            drink = {
+                'id': row[0],
+                'name': row[1],
+                'glass': row[2],
+                'instructions': row[3],
+                'ingredients': row[4],
+                # Add more properties as needed
+            }
+            featured_drinks.append(drink)
+
+    # Close the database connection
+    conn.close()
+
+    # Return the featured drinks as a JSON response
+    return jsonify(featured_drinks)
+
 # Get drink image
 @app.route('/api/drinks/image/<drink_id>', methods=['GET'])
 def get_drink_image(drink_id):
