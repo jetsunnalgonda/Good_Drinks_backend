@@ -64,7 +64,7 @@ def get_all_drinks():
         ingredients_json = json.loads(row[2])
         ingredients_dict = {item['name']: item['measurement'] for item in ingredients_json}
 
-        drink['ingredients'] = ingredients_dict
+        drink['ingredients'] = ingredients_json
         
         # Split the flavors string to get a list of flavors
         flavors_string = row[5]
@@ -101,7 +101,7 @@ def get_featured_drinks():
             drink = {
                 'id': row[0],
                 'name': row[1],
-                'ingredients': ingredients_dict,
+                'ingredients': ingredients_json,
                 'glass': row[3],
                 'instructions': row[4],
                 'flavors': row[5].split(','),  # Split the flavors string to get a list of flavors
@@ -179,13 +179,13 @@ def get_random_drink():
     if rows:
         random_row = random.choice(rows)
         ingredients_json = json.loads(random_row[2])
-        ingredients_dict = {item['name']: item['measurement'] for item in ingredients_json}
+        # ingredients_dict = {item['name']: item['measurement'] for item in ingredients_json}
         # drink['ingredients'] = ingredients_dict
 
         drink = {
             'id': random_row[0],
             'name': random_row[1],
-            'ingredients': ingredients_dict,
+            'ingredients': ingredients_json,
             'glass': random_row[3],
             'instructions': random_row[4],
             # 'flavors': json.loads(random_row[5]),  # Convert the flavors from JSON string to a list
