@@ -59,12 +59,9 @@ def get_all_drinks():
             'story': row[6]
         }
         # Parse the JSON string and convert it to a list of dictionaries
-        # ingredients_json = row[2]
-        # ingredients_list = json.loads(ingredients_json)
-        ingredients_json = json.loads(row[2])
-        ingredients_dict = {item['name']: item['measurement'] for item in ingredients_json}
-
-        drink['ingredients'] = ingredients_json
+        ingredients_json = row[2]
+        ingredients_list = json.loads(ingredients_json)
+        drink['ingredients'] = ingredients_list
         
         # Split the flavors string to get a list of flavors
         flavors_string = row[5]
@@ -91,24 +88,19 @@ def get_featured_drinks():
         c.execute("SELECT * FROM drinks WHERE id=?", (drink_id,))
         row = c.fetchone()
         if row:
-            # ingredients_dict = json.loads(row[2])
-            # ingredients_dict = {item['name']: item['measurement'] for item in ingredients_json}
-        
-            ingredients_json = json.loads(row[2])
-            ingredients_dict = {item['name']: item['measurement'] for item in ingredients_json}
+            ingredients_dict = json.dumps(row[2])
 
             # Create a dictionary representing the drink and add it to the list
             drink = {
                 'id': row[0],
                 'name': row[1],
-                'ingredients': ingredients_json,
+                'ingredients': ingredients_dict,
                 'glass': row[3],
                 'instructions': row[4],
                 'flavors': row[5].split(','),  # Split the flavors string to get a list of flavors
                 'story': row[6],
                 # Add more properties as needed
             }
-            # drink['ingredients'] = ingredients_dict
             featured_drinks.append(drink)
 
     # Close the database connection
@@ -178,22 +170,19 @@ def get_random_drink():
     conn.close()
     if rows:
         random_row = random.choice(rows)
-        ingredients_json = json.loads(random_row[2])
-        # ingredients_dict = {item['name']: item['measurement'] for item in ingredients_json}
-        # drink['ingredients'] = ingredients_dict
-
         drink = {
             'id': random_row[0],
             'name': random_row[1],
-            'ingredients': ingredients_json,
             'glass': random_row[3],
             'instructions': random_row[4],
-            # 'flavors': json.loads(random_row[5]),  # Convert the flavors from JSON string to a list
-            'flavors': random_row[5].split(','),
+            'flavors': json.loads(random_row[5]),  # Convert the flavors from JSON string to a list
             'story': random_row[6]
         }
 
         # Parse the ingredients from JSON string to a dictionary
+        ingredients_json = json.loads(random_row[2])
+        ingredients_dict = {item['name']: item['measurement'] for item in ingredients_json}
+        drink['ingredients'] = ingredients_dict
         return jsonify(drink)
     return jsonify({'message': 'No drinks found'}), 404
 
