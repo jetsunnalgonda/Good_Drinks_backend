@@ -172,9 +172,11 @@ def get_random_drink():
     conn.close()
     if rows:
         random_row = random.choice(rows)
+        ingredients_json = json.loads(random_row[2])
         drink = {
             'id': random_row[0],
             'name': random_row[1],
+            'ingredients': ingredients_json,
             'glass': random_row[3],
             'instructions': random_row[4],
             # 'flavors': json.loads(random_row[5]),  # Convert the flavors from JSON string to a list
@@ -183,9 +185,9 @@ def get_random_drink():
         }
 
         # Parse the ingredients from JSON string to a dictionary
-        ingredients_json = json.loads(random_row[2])
+        # ingredients_json = json.loads(random_row[2])
         # ingredients_dict = {item['name']: item['measurement'] for item in ingredients_json}
-        drink['ingredients'] = ingredients_json
+        # drink['ingredients'] = ingredients_json
         return jsonify(drink)
     return jsonify({'message': 'No drinks found'}), 404
 
@@ -198,7 +200,8 @@ def get_drink(drink_id):
     row = c.fetchone()
     conn.close()
     if row:
-        drink = {'id': row[0], 'name': row[1], 'ingredients': row[2], 'glass': row[3], 'instructions': row[4], 'flavors': row[5], 'story': row[6]}
+        ingredients_json = json.loads(row[2])
+        drink = {'id': row[0], 'name': row[1], 'ingredients': ingredients_json, 'glass': row[3], 'instructions': row[4], 'flavors': row[5].split(','), 'story': row[6]}
         return jsonify(drink)
     return jsonify({'message': 'Drink not found'}), 404
 
