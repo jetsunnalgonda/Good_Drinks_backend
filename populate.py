@@ -35,8 +35,8 @@ for drink in drinks:
     ingredients = json.dumps(drink['ingredients'])
     glass = drink['glass']
     instructions = drink['instructions']
-    # flavors = ', '.join(drink['flavors'])
-    flavors = json.dumps(drink['flavors'])
+    flavors = ', '.join(drink['flavors'])
+    # flavors = json.dumps(drink['flavors'])
     story = drink['story']
 
     # Insert the drink into the drinks table
