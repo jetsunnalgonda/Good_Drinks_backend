@@ -89,14 +89,14 @@ def get_featured_drinks():
         row = c.fetchone()
         if row:
             ingredients_json = json.loads(row[2])
-            ingredients_list = [{"name": item['name'], "measurement": item['measurement']} for item in ingredients_json]
-            ingredients = [{"name": k, "measurement": v} for k, v in ingredients_list.items()]
+            # ingredients_list = [{"name": item['name'], "measurement": item['measurement']} for item in ingredients_json]
+            # ingredients = [{"name": k, "measurement": v} for k, v in ingredients_list.items()]
         
             # Create a dictionary representing the drink and add it to the list
             drink = {
                 'id': row[0],
                 'name': row[1],
-                'ingredients': ingredients,
+                'ingredients': ingredients_json,
                 'glass': row[3],
                 'instructions': row[4],
                 'flavors': row[5].split(','),  # Split the flavors string to get a list of flavors

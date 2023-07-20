@@ -31,10 +31,12 @@ for drink in drinks:
     # item = drink['ingredients']
 
     name = drink['name']
-    ingredients = json.dumps({item['name']: item['measurement'] for item in drink['ingredients']})
+    # ingredients = json.dumps({item['name']: item['measurement'] for item in drink['ingredients']})
+    ingredients = json.dumps(drink['ingredients'])
     glass = drink['glass']
     instructions = drink['instructions']
-    flavors = ', '.join(drink['flavors'])
+    # flavors = ', '.join(drink['flavors'])
+    flavors = json.dumps(drink['flavors'])
     story = drink['story']
 
     # Insert the drink into the drinks table
