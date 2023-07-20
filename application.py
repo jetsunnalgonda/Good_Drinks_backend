@@ -30,6 +30,11 @@ def create_table():
 def index():
     return render_template('index.html')
 
+# Backend API to retrieve the API version
+@app.route('/api/version', methods=['GET'])
+def get_api_version():
+    return jsonify({'version': '1.0'})
+
 # Get all drinks
 @app.route('/api/drinks', methods=['GET'])
 def get_all_drinks():

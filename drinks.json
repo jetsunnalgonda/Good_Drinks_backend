@@ -2,123 +2,875 @@
     "drinks": [
       {
         "name": "Mojito",
-        "ingredients": ["white rum", "lime juice", "simple syrup", "mint leaves", "soda water"],
+        "ingredients": [
+          {
+            "name": "white rum",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "lime juice",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "simple syrup",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "mint leaves",
+            "measurement": "6 leaves"
+          },
+          {
+            "name": "soda water",
+            "measurement": "Top up"
+          }
+        ],
         "glass": "Collins glass",
-        "instructions": "Muddle mint leaves with lime juice and simple syrup. Add rum and ice. Top with soda water. Garnish with mint sprig."
+        "instructions": "Muddle mint leaves with lime juice and simple syrup. Add rum and ice. Top with soda water. Garnish with mint sprig.",
+        "flavors": ["Refreshing", "Minty"],
+        "story": "The Mojito is a classic cocktail that originated in Cuba. It is known for its refreshing and minty flavors, making it a popular choice for warm summer days."
       },
       {
         "name": "Old Fashioned",
-        "ingredients": ["bourbon", "sugar cube", "bitters", "orange peel", "cherry"],
+        "ingredients": [
+          {
+            "name": "bourbon",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "sugar cube",
+            "measurement": "1 cube"
+          },
+          {
+            "name": "bitters",
+            "measurement": "2 dashes"
+          },
+          {
+            "name": "orange peel",
+            "measurement": "1 twist"
+          },
+          {
+            "name": "cherry",
+            "measurement": "1"
+          }
+        ],
         "glass": "Rocks glass",
-        "instructions": "Place sugar cube in glass, add bitters and splash of water. Muddle until dissolved. Add bourbon and ice. Stir gently. Garnish with orange peel and cherry."
+        "instructions": "Place sugar cube in glass, add bitters and splash of water. Muddle until dissolved. Add bourbon and ice. Stir gently. Garnish with orange peel and cherry.",
+        "flavors": ["Strong", "Bittersweet"],
+        "story": "The Old Fashioned is a classic cocktail that dates back to the 19th century. It is a strong and bittersweet drink that is often enjoyed as a sipping cocktail."
       },
       {
         "name": "Cosmopolitan",
-        "ingredients": ["vodka", "cranberry juice", "triple sec", "lime juice"],
+        "ingredients": [
+          {
+            "name": "vodka",
+            "measurement": "1.5 oz"
+          },
+          {
+            "name": "cranberry juice",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "triple sec",
+            "measurement": "0.5 oz"
+          },
+          {
+            "name": "lime juice",
+            "measurement": "0.5 oz"
+          }
+        ],
         "glass": "Cocktail glass",
-        "instructions": "Combine all ingredients in a shaker with ice. Shake well. Strain into a chilled cocktail glass. Garnish with lime twist."
+        "instructions": "Combine all ingredients in a shaker with ice. Shake well. Strain into a chilled cocktail glass. Garnish with lime twist.",
+        "flavors": ["Citrusy", "Tangy"],
+        "story": "The Cosmopolitan, also known as 'Cosmo,' gained popularity in the 1990s due to its appearance in the TV show 'Sex and the City.' It is a vibrant and citrusy cocktail that is often associated with elegance and sophistication."
       },
       {
         "name": "Margarita",
-        "ingredients": ["tequila", "lime juice", "triple sec", "salt"],
+        "ingredients": [
+          {
+            "name": "tequila",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "lime juice",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "triple sec",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "salt",
+            "measurement": "For rimming"
+          }
+        ],
         "glass": "Margarita glass",
-        "instructions": "Rub the rim of the glass with lime juice and dip in salt. Combine tequila, lime juice, and triple sec in a shaker with ice. Shake well. Strain into the glass. Garnish with lime wheel."
+        "instructions": "Rub the rim of the glass with lime juice and dip in salt. Combine tequila, lime juice, and triple sec in a shaker with ice. Shake well. Strain into the glass. Garnish with lime wheel.",
+        "flavors": ["Tangy", "Citrusy"],
+        "story": "The Margarita is a popular cocktail that originated in Mexico. It is a tangy and citrusy drink that is often associated with tropical flavors and beachside relaxation."
       },
       {
         "name": "Negroni",
-        "ingredients": ["gin", "sweet vermouth", "Campari", "orange peel"],
+        "ingredients": [
+          {
+            "name": "gin",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "sweet vermouth",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "Campari",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "orange peel",
+            "measurement": "1 twist"
+          }
+        ],
         "glass": "Rocks glass",
-        "instructions": "Stir gin, sweet vermouth, and Campari with ice in a mixing glass. Strain into an ice-filled rocks glass. Garnish with orange peel."
+        "instructions": "Stir gin, sweet vermouth, and Campari with ice in a mixing glass. Strain into an ice-filled rocks glass. Garnish with orange peel.",
+        "flavors": ["Bitter", "Herbal"],
+        "story": "The Negroni is a classic Italian cocktail known for its bitter and herbal flavors. It was invented in the early 20th century and has since gained a cult following among cocktail enthusiasts."
       },
       {
         "name": "Martini",
-        "ingredients": ["gin", "dry vermouth", "olive"],
+        "ingredients": [
+          {
+            "name": "gin",
+            "measurement": "2.5 oz"
+          },
+          {
+            "name": "dry vermouth",
+            "measurement": "0.5 oz"
+          },
+          {
+            "name": "olive",
+            "measurement": "1"
+          }
+        ],
         "glass": "Martini glass",
-        "instructions": "Combine gin and dry vermouth in a mixing glass with ice. Stir well. Strain into a chilled martini glass. Garnish with olive."
+        "instructions": "Combine gin and dry vermouth in a mixing glass with ice. Stir well. Strain into a chilled martini glass. Garnish with olive.",
+        "flavors": ["Dry", "Herbal"],
+        "story": "The Martini is a classic cocktail that is often associated with sophistication and elegance. It is a dry and herbal drink that has become a symbol of timeless style."
       },
       {
         "name": "Whiskey Sour",
-        "ingredients": ["whiskey", "lemon juice", "simple syrup", "cherry", "orange slice"],
+        "ingredients": [
+          {
+            "name": "whiskey",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "lemon juice",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "simple syrup",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "cherry",
+            "measurement": "1"
+          },
+          {
+            "name": "orange slice",
+            "measurement": "1"
+          }
+        ],
         "glass": "Rocks glass",
-        "instructions": "Combine whiskey, lemon juice, and simple syrup in a shaker with ice. Shake well. Strain into an ice-filled rocks glass. Garnish with cherry and orange slice."
+        "instructions": "Combine whiskey, lemon juice, and simple syrup in a shaker with ice. Shake well. Strain into an ice-filled rocks glass. Garnish with cherry and orange slice.",
+        "flavors": ["Sour", "Citrusy"],
+        "story": "The Whiskey Sour is a classic cocktail known for its sour and citrusy flavors. It is a versatile drink that can be enjoyed year-round and is often associated with the elegance of whiskey."
       },
       {
         "name": "Piña Colada",
-        "ingredients": ["rum", "pineapple juice", "coconut cream", "pineapple wedge", "cherry"],
+        "ingredients": [
+          {
+            "name": "rum",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "pineapple juice",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "coconut cream",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "pineapple wedge",
+            "measurement": "For garnish"
+          },
+          {
+            "name": "cherry",
+            "measurement": "1"
+          }
+        ],
         "glass": "Hurricane glass",
-        "instructions": "Blend rum, pineapple juice, and coconut cream with ice in a blender until smooth. Pour into a hurricane glass. Garnish with pineapple wedge and cherry."
+        "instructions": "Blend rum, pineapple juice, and coconut cream with ice in a blender until smooth. Pour into a hurricane glass. Garnish with pineapple wedge and cherry.",
+        "flavors": ["Tropical", "Creamy"],
+        "story": "The Piña Colada is a tropical cocktail that is often associated with vacation vibes and beachside relaxation. It is a creamy and fruity drink that transports you to a tropical paradise."
       },
       {
         "name": "Screwdriver",
-        "ingredients": ["vodka", "orange juice", "orange slice"],
+        "ingredients": [
+          {
+            "name": "vodka",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "orange juice",
+            "measurement": "4 oz"
+          },
+          {
+            "name": "orange slice",
+            "measurement": "For garnish"
+          }
+        ],
         "glass": "Highball glass",
-        "instructions": "Pour vodka and orange juice into a highball glass filled with ice. Stir well. Garnish with orange slice."
+        "instructions": "Pour vodka and orange juice into a highball glass filled with ice. Stir well. Garnish with orange slice.",
+        "flavors": ["Citrusy", "Refreshing"],
+        "story": "The Screwdriver is a classic cocktail that is known for its simplicity and refreshing flavors. It is a popular choice for brunches and casual gatherings."
       },
       {
         "name": "Long Island Iced Tea",
-        "ingredients": ["vodka", "tequila", "rum", "gin", "triple sec", "lemon juice", "simple syrup", "cola"],
+        "ingredients": [
+          {
+            "name": "vodka",
+            "measurement": "0.5 oz"
+          },
+          {
+            "name": "tequila",
+            "measurement": "0.5 oz"
+          },
+          {
+            "name": "rum",
+            "measurement": "0.5 oz"
+          },
+          {
+            "name": "gin",
+            "measurement": "0.5 oz"
+          },
+          {
+            "name": "triple sec",
+            "measurement": "0.5 oz"
+          },
+          {
+            "name": "lemon juice",
+            "measurement": "0.5 oz"
+          },
+          {
+            "name": "simple syrup",
+            "measurement": "0.5 oz"
+          },
+          {
+            "name": "cola",
+            "measurement": "Top up"
+          },
+          {
+            "name": "lemon wheel",
+            "measurement": "For garnish"
+          }
+        ],
         "glass": "Collins glass",
-        "instructions": "Combine vodka, tequila, rum, gin, triple sec, lemon juice, and simple syrup in a shaker with ice. Shake well. Strain into an ice-filled Collins glass. Top with cola. Garnish with lemon wheel."
+        "instructions": "Combine vodka, tequila, rum, gin, triple sec, lemon juice, and simple syrup in a shaker with ice. Shake well. Strain into an ice-filled Collins glass. Top with cola. Garnish with lemon wheel.",
+        "flavors": ["Strong", "Bittersweet"],
+        "story": "The Long Island Iced Tea is a potent cocktail that packs a punch. Despite its name, it doesn't actually contain tea but is a mix of various spirits and flavors."
       },
       {
         "name": "Daiquiri",
-        "ingredients": ["rum", "lime juice", "simple syrup"],
+        "ingredients": [
+          {
+            "name": "rum",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "lime juice",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "simple syrup",
+            "measurement": "1 oz"
+          }
+        ],
         "glass": "Cocktail glass",
-        "instructions": "Combine rum, lime juice, and simple syrup in a shaker with ice. Shake well. Strain into a chilled cocktail glass. Garnish with lime wheel."
+        "instructions": "Combine rum, lime juice, and simple syrup in a shaker with ice. Shake well. Strain into a chilled cocktail glass. Garnish with lime wheel.",
+        "flavors": ["Citrusy", "Tart"],
+        "story": "The Daiquiri is a classic cocktail that originated in Cuba. It is a simple and refreshing drink that highlights the flavors of rum and lime."
       },
       {
         "name": "Gin and Tonic",
-        "ingredients": ["gin", "tonic water", "lime wedge"],
+        "ingredients": [
+          {
+            "name": "gin",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "tonic water",
+            "measurement": "4 oz"
+          },
+          {
+            "name": "lime wedge",
+            "measurement": "For garnish"
+          }
+        ],
         "glass": "Highball glass",
-        "instructions": "Fill a highball glass with ice. Pour gin over the ice. Top with tonic water. Garnish with lime wedge."
+        "instructions": "Fill a highball glass with ice. Pour gin over the ice. Top with tonic water. Garnish with lime wedge.",
+        "flavors": ["Crisp", "Bitter"],
+        "story": "The Gin and Tonic is a classic cocktail that is beloved for its simplicity and refreshing flavors. It is a popular choice for gin lovers and is often enjoyed as a relaxing drink."
       },
       {
         "name": "White Russian",
-        "ingredients": ["vodka", "coffee liqueur", "cream"],
+        "ingredients": [
+          {
+            "name": "vodka",
+            "measurement": "1.5 oz"
+          },
+          {
+            "name": "coffee liqueur",
+            "measurement": "0.75 oz"
+          },
+          {
+            "name": "cream",
+            "measurement": "0.75 oz"
+          }
+        ],
         "glass": "Old-fashioned glass",
-        "instructions": "Pour vodka and coffee liqueur over ice in an old-fashioned glass. Stir gently. Float cream on top."
+        "instructions": "Pour vodka and coffee liqueur over ice in an old-fashioned glass. Stir gently. Float cream on top.",
+        "flavors": ["Rich", "Creamy"],
+        "story": "The White Russian is a creamy and indulgent cocktail that is known for its rich flavors. It gained popularity through its appearance in the movie 'The Big Lebowski.'"
       },
       {
         "name": "Mai Tai",
-        "ingredients": ["rum", "lime juice", "orange curaçao", "orgeat syrup", "dark rum", "pineapple wedge", "cherry", "mint sprig"],
+        "ingredients": [
+          {
+            "name": "rum",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "lime juice",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "orange curaçao",
+            "measurement": "0.5 oz"
+          },
+          {
+            "name": "orgeat syrup",
+            "measurement": "0.5 oz"
+          },
+          {
+            "name": "dark rum",
+            "measurement": "0.5 oz"
+          },
+          {
+            "name": "pineapple wedge",
+            "measurement": "For garnish"
+          },
+          {
+            "name": "cherry",
+            "measurement": "1"
+          },
+          {
+            "name": "mint sprig",
+            "measurement": "1"
+          }
+        ],
         "glass": "Collins glass",
-        "instructions": "Shake rum, lime juice, orange curaçao, and orgeat syrup with ice. Strain into an ice-filled Collins glass. Float dark rum on top. Garnish with pineapple wedge, cherry, and mint sprig."
+        "instructions": "Shake rum, lime juice, orange curaçao, and orgeat syrup with ice. Strain into an ice-filled Collins glass. Float dark rum on top. Garnish with pineapple wedge, cherry, and mint sprig.",
+        "flavors": ["Tropical", "Fruity"],
+        "story": "The Mai Tai is a tropical cocktail that is associated with tiki culture. It is a fruity and exotic drink that transports you to a Polynesian paradise."
       },
       {
         "name": "Bloody Mary",
-        "ingredients": ["vodka", "tomato juice", "lemon juice", "Worcestershire sauce", "hot sauce", "celery salt", "pepper", "celery stalk", "lemon wedge"],
+        "ingredients": [
+          {
+            "name": "vodka",
+            "measurement": "1.5 oz"
+          },
+          {
+            "name": "tomato juice",
+            "measurement": "3 oz"
+          },
+          {
+            "name": "lemon juice",
+            "measurement": "0.5 oz"
+          },
+          {
+            "name": "Worcestershire sauce",
+            "measurement": "2 dashes"
+          },
+          {
+            "name": "hot sauce",
+            "measurement": "2 dashes"
+          },
+          {
+            "name": "celery salt",
+            "measurement": "Pinch"
+          },
+          {
+            "name": "pepper",
+            "measurement": "Pinch"
+          },
+          {
+            "name": "celery stalk",
+            "measurement": "For garnish"
+          },
+          {
+            "name": "lemon wedge",
+            "measurement": "For garnish"
+          }
+        ],
         "glass": "Highball glass",
-        "instructions": "Combine vodka, tomato juice, lemon juice, Worcestershire sauce, hot sauce, celery salt, and pepper in a mixing glass. Stir well. Pour into a highball glass filled with ice. Garnish with celery stalk and lemon wedge."
+        "instructions": "Combine vodka, tomato juice, lemon juice, Worcestershire sauce, hot sauce, celery salt, and pepper in a mixing glass. Stir well. Pour into a highball glass filled with ice. Garnish with celery stalk and lemon wedge.",
+        "flavors": ["Savory", "Spicy"],
+        "story": "The Bloody Mary is a popular brunch cocktail known for its bold and savory flavors. It is often enjoyed as a revitalizing drink with a hint of spice."
       },
       {
         "name": "Mimosa",
-        "ingredients": ["champagne", "orange juice"],
+        "ingredients": [
+          {
+            "name": "champagne",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "orange juice",
+            "measurement": "2 oz"
+          }
+        ],
         "glass": "Champagne flute",
-        "instructions": "Pour equal parts champagne and orange juice into a chilled champagne flute."
+        "instructions": "Pour equal parts champagne and orange juice into a chilled champagne flute.",
+        "flavors": ["Bubbly", "Citrusy"],
+        "story": "The Mimosa is a classic brunch cocktail that is known for its refreshing and bubbly nature. It is a popular choice for celebrating special occasions or enjoying a leisurely brunch."
       },
       {
         "name": "Sangria",
-        "ingredients": ["red wine", "orange juice", "brandy", "simple syrup", "sliced fruit", "club soda"],
+        "ingredients": [
+          {
+            "name": "red wine",
+            "measurement": "4 oz"
+          },
+          {
+            "name": "orange juice",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "brandy",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "simple syrup",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "sliced fruit",
+            "measurement": "For garnish"
+          },
+          {
+            "name": "club soda",
+            "measurement": "Splash"
+          }
+        ],
         "glass": "Wine glass",
-        "instructions": "In a pitcher, combine red wine, orange juice, brandy, and simple syrup. Stir well. Add sliced fruit. Refrigerate for at least 4 hours. Serve in wine glasses with a splash of club soda."
+        "instructions": "In a pitcher, combine red wine, orange juice, brandy, and simple syrup. Stir well. Add sliced fruit. Refrigerate for at least 4 hours. Serve in wine glasses with a splash of club soda.",
+        "flavors": ["Fruity", "Refreshing"],
+        "story": "Sangria is a popular Spanish drink that is made with red wine and mixed with various fruits. It is a refreshing and fruity beverage that is perfect for summer parties and gatherings."
       },
       {
         "name": "Caipirinha",
-        "ingredients": ["cachaça", "lime", "sugar"],
+        "ingredients": [
+          {
+            "name": "cachaça",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "lime",
+            "measurement": "1"
+          },
+          {
+            "name": "sugar",
+            "measurement": "2 tsp"
+          }
+        ],
         "glass": "Old-fashioned glass",
-        "instructions": "Cut the lime into wedges. Muddle the lime wedges and sugar in an old-fashioned glass. Fill the glass with ice. Pour cachaça over the ice. Stir gently."
+        "instructions": "Cut the lime into wedges. Muddle the lime wedges and sugar in an old-fashioned glass. Fill the glass with ice. Pour cachaça over the ice. Stir gently.",
+        "flavors": ["Citrusy", "Sweet"],
+        "story": "The Caipirinha is a traditional Brazilian cocktail that is made with cachaça, a distilled spirit made from sugarcane. It is a refreshing and citrusy drink that is often enjoyed during festive celebrations in Brazil."
       },
       {
         "name": "Amaretto Sour",
-        "ingredients": ["amaretto", "lemon juice", "simple syrup", "cherry", "orange slice"],
+        "ingredients": [
+          {
+            "name": "amaretto",
+            "measurement": "1.5 oz"
+          },
+          {
+            "name": "lemon juice",
+            "measurement": "0.75 oz"
+          },
+          {
+            "name": "simple syrup",
+            "measurement": "0.75 oz"
+          },
+          {
+            "name": "cherry",
+            "measurement": "1"
+          },
+          {
+            "name": "orange slice",
+            "measurement": "1"
+          }
+        ],
         "glass": "Rocks glass",
-        "instructions": "Combine amaretto, lemon juice, and simple syrup in a shaker with ice. Shake well. Strain into an ice-filled rocks glass. Garnish with cherry and orange slice."
+        "instructions": "Combine amaretto, lemon juice, and simple syrup in a shaker with ice. Shake well. Strain into an ice-filled rocks glass. Garnish with cherry and orange slice.",
+        "flavors": ["Sweet", "Tart"],
+        "story": "The Amaretto Sour is a popular cocktail that combines the sweet and nutty flavors of amaretto with the tartness of lemon juice. It is a balanced and refreshing drink."
       },
       {
         "name": "Mint Julep",
-        "ingredients": ["bourbon", "simple syrup", "mint leaves", "crushed ice"],
+        "ingredients": [
+          {
+            "name": "bourbon",
+            "measurement": "2.5 oz"
+          },
+          {
+            "name": "simple syrup",
+            "measurement": "0.5 oz"
+          },
+          {
+            "name": "mint leaves",
+            "measurement": "8 leaves"
+          },
+          {
+            "name": "crushed ice",
+            "measurement": "For serving"
+          }
+        ],
         "glass": "Julep cup",
-        "instructions": "In a julep cup, muddle mint leaves with simple syrup. Fill the cup with crushed ice. Pour bourbon over the ice and stir well. Garnish with a mint sprig."
+        "instructions": "In a julep cup, muddle mint leaves with simple syrup. Fill the cup with crushed ice. Pour bourbon over the ice and stir well. Garnish with a mint sprig.",
+        "flavors": ["Herbal", "Refreshing"],
+        "story": "The Mint Julep is a classic Southern cocktail that is known for its refreshing and herbal flavors. It is traditionally served in a silver or pewter cup and is often associated with the Kentucky Derby."
+      },
+      {
+        "name": "Sazerac",
+        "ingredients": [
+          {
+            "name": "rye whiskey",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "sugar cube",
+            "measurement": "1 cube"
+          },
+          {
+            "name": "Peychaud's bitters",
+            "measurement": "2 dashes"
+          },
+          {
+            "name": "absinthe",
+            "measurement": "1 tsp"
+          },
+          {
+            "name": "lemon peel",
+            "measurement": "1 twist"
+          }
+        ],
+        "glass": "Rocks glass",
+        "instructions": "Rinse a chilled rocks glass with absinthe and discard the excess. In a separate mixing glass, muddle the sugar cube with bitters. Add rye whiskey and ice. Stir well. Strain into the prepared rocks glass. Garnish with lemon peel.",
+        "flavors": ["Strong", "Herbal"],
+        "story": "The Sazerac is a classic New Orleans cocktail that is known for its bold and complex flavors. It is a strong and aromatic drink that is often enjoyed as a sipping cocktail."
+      },
+      {
+        "name": "Pisco Sour",
+        "ingredients": [
+          {
+            "name": "pisco",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "lime juice",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "simple syrup",
+            "measurement": "0.75 oz"
+          },
+          {
+            "name": "egg white",
+            "measurement": "1"
+          },
+          {
+            "name": "Angostura bitters",
+            "measurement": "3 dashes"
+          }
+        ],
+        "glass": "Rocks glass",
+        "instructions": "Combine pisco, lime juice, simple syrup, and egg white in a shaker without ice. Shake vigorously for about 10 seconds. Add ice to the shaker and shake again. Strain into a rocks glass. Add a few dashes of Angostura bitters on top.",
+        "flavors": ["Citrusy", "Frothy"],
+        "story": "The Pisco Sour is a classic cocktail from Peru that showcases the unique flavors of pisco, a grape brandy. It is a tangy and frothy drink that is often enjoyed as a symbol of Peruvian culture."
+      },
+      {
+        "name": "Irish Coffee",
+        "ingredients": [
+          {
+            "name": "Irish whiskey",
+            "measurement": "1.5 oz"
+          },
+          {
+            "name": "hot coffee",
+            "measurement": "6 oz"
+          },
+          {
+            "name": "brown sugar",
+            "measurement": "1 tsp"
+          },
+          {
+            "name": "whipped cream",
+            "measurement": "For topping"
+          }
+        ],
+        "glass": "Irish coffee glass",
+        "instructions": "Preheat an Irish coffee glass with hot water and discard the water. Add brown sugar to the glass. Pour in hot coffee and stir until the sugar is dissolved. Add Irish whiskey and stir again. Top with whipped cream.",
+        "flavors": ["Warm", "Indulgent"],
+        "story": "The Irish Coffee is a classic hot cocktail that combines the flavors of Irish whiskey, hot coffee, sugar, and cream. It is a comforting and indulgent drink that is often enjoyed during colder months."
+      },
+      {
+        "name": "Bellini",
+        "ingredients": [
+          {
+            "name": "peach puree",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "prosecco",
+            "measurement": "4 oz"
+          }
+        ],
+        "glass": "Champagne flute",
+        "instructions": "Pour peach puree into a chilled champagne flute. Slowly add prosecco and stir gently.",
+        "flavors": ["Fruity", "Bubbly"],
+        "story": "The Bellini is a classic Italian cocktail that is made with peach puree and prosecco. It is a fruity and bubbly drink that is often associated with celebrations and brunches."
+      },
+      {
+        "name": "Whiskey Smash",
+        "ingredients": [
+          {
+            "name": "bourbon",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "lemon juice",
+            "measurement": "0.75 oz"
+          },
+          {
+            "name": "simple syrup",
+            "measurement": "0.75 oz"
+          },
+          {
+            "name": "mint leaves",
+            "measurement": "6 leaves"
+          },
+          {
+            "name": "lemon wedge",
+            "measurement": "For garnish"
+          }
+        ],
+        "glass": "Rocks glass",
+        "instructions": "Muddle mint leaves with lemon juice and simple syrup in a shaker. Add bourbon and ice. Shake well. Strain into an ice-filled rocks glass. Garnish with a lemon wedge.",
+        "flavors": ["Minty", "Citrusy"],
+        "story": "The Whiskey Smash is a refreshing cocktail that combines the flavors of bourbon, mint, and citrus. It is a perfect drink for whiskey lovers who enjoy a hint of brightness and herbal notes."
+      },
+      {
+        "name": "Aperol Spritz",
+        "ingredients": [
+          {
+            "name": "Aperol",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "prosecco",
+            "measurement": "3 oz"
+          },
+          {
+            "name": "soda water",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "orange slice",
+            "measurement": "For garnish"
+          }
+        ],
+        "glass": "Wine glass",
+        "instructions": "Fill a wine glass with ice. Add Aperol, prosecco, and soda water. Stir gently. Garnish with an orange slice.",
+        "flavors": ["Bitter", "Citrusy"],
+        "story": "The Aperol Spritz is a popular Italian aperitif that is known for its refreshing and bittersweet flavors. It is a light and effervescent drink that is perfect for enjoying before a meal."
+      },
+      {
+        "name": "Dark 'n' Stormy",
+        "ingredients": [
+          {
+            "name": "dark rum",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "ginger beer",
+            "measurement": "4 oz"
+          },
+          {
+            "name": "lime wedge",
+            "measurement": "For garnish"
+          }
+        ],
+        "glass": "Highball glass",
+        "instructions": "Fill a highball glass with ice. Pour in dark rum. Top with ginger beer. Stir gently. Garnish with a lime wedge.",
+        "flavors": ["Spicy", "Slightly Sweet"],
+        "story": "The Dark 'n' Stormy is a classic cocktail that combines dark rum and ginger beer. It is a flavorful and slightly spicy drink that is often associated with the Caribbean."
+      },
+      {
+        "name": "Sidecar",
+        "ingredients": [
+          {
+            "name": "cognac",
+            "measurement": "1.5 oz"
+          },
+          {
+            "name": "triple sec",
+            "measurement": "0.75 oz"
+          },
+          {
+            "name": "lemon juice",
+            "measurement": "0.75 oz"
+          },
+          {
+            "name": "lemon twist",
+            "measurement": "For garnish"
+          }
+        ],
+        "glass": "Cocktail glass",
+        "instructions": "Combine cognac, triple sec, and lemon juice in a shaker with ice. Shake well. Strain into a chilled cocktail glass. Garnish with a lemon twist.",
+        "flavors": ["Citrusy", "Smooth"],
+        "story": "The Sidecar is a classic cocktail that is believed to have originated in France during World War I. It is a sophisticated and citrusy drink that is often enjoyed as an after-dinner cocktail."
+      },
+      {
+        "name": "Gimlet",
+        "ingredients": [
+          {
+            "name": "gin",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "lime juice",
+            "measurement": "0.75 oz"
+          },
+          {
+            "name": "simple syrup",
+            "measurement": "0.75 oz"
+          },
+          {
+            "name": "lime wheel",
+            "measurement": "For garnish"
+          }
+        ],
+        "glass": "Cocktail glass",
+        "instructions": "Combine gin, lime juice, and simple syrup in a shaker with ice. Shake well. Strain into a chilled cocktail glass. Garnish with a lime wheel.",
+        "flavors": ["Citrusy", "Tart"],
+        "story": "The Gimlet is a classic cocktail that is known for its simplicity and tangy flavors. It is a timeless drink that is often enjoyed as a refreshing choice for gin enthusiasts."
+      },
+      {
+        "name": "French 75",
+        "ingredients": [
+          {
+            "name": "gin",
+            "measurement": "1.5 oz"
+          },
+          {
+            "name": "lemon juice",
+            "measurement": "0.75 oz"
+          },
+          {
+            "name": "simple syrup",
+            "measurement": "0.5 oz"
+          },
+          {
+            "name": "champagne",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "lemon twist",
+            "measurement": "For garnish"
+          }
+        ],
+        "glass": "Champagne flute",
+        "instructions": "Combine gin, lemon juice, and simple syrup in a shaker with ice. Shake well. Strain into a chilled champagne flute. Top with champagne. Garnish with a lemon twist.",
+        "flavors": ["Bubbly", "Citrusy"],
+        "story": "The French 75 is a classic champagne cocktail that is known for its elegance and effervescence. It is a celebratory drink that combines the flavors of gin, lemon, and champagne."
+      },
+      {
+        "name": "Tom Collins",
+        "ingredients": [
+          {
+            "name": "gin",
+            "measurement": "2 oz"
+          },
+          {
+            "name": "lemon juice",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "simple syrup",
+            "measurement": "0.5 oz"
+          },
+          {
+            "name": "club soda",
+            "measurement": "3 oz"
+          },
+          {
+            "name": "lemon slice",
+            "measurement": "For garnish"
+          },
+          {
+            "name": "maraschino cherry",
+            "measurement": "1"
+          }
+        ],
+        "glass": "Collins glass",
+        "instructions": "Combine gin, lemon juice, and simple syrup in a shaker with ice. Shake well. Strain into an ice-filled Collins glass. Top with club soda. Garnish with a lemon slice and maraschino cherry.",
+        "flavors": ["Citrusy", "Refreshing"],
+        "story": "The Tom Collins is a classic cocktail that is known for its crisp and refreshing flavors. It is a popular choice for warm weather and is often enjoyed as a light and citrusy drink."
+      },
+      {
+        "name": "Corpse Reviver No. 2",
+        "ingredients": [
+          {
+            "name": "gin",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "Lillet Blanc",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "Cointreau",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "lemon juice",
+            "measurement": "1 oz"
+          },
+          {
+            "name": "absinthe",
+            "measurement": "1 dash"
+          },
+          {
+            "name": "cherry",
+            "measurement": "1"
+          }
+        ],
+        "glass": "Cocktail glass",
+        "instructions": "Shake gin, Lillet Blanc, Cointreau, and lemon juice with ice. Strain into a chilled cocktail glass that has been rinsed with absinthe. Garnish with a cherry.",
+        "flavors": ["Citrusy", "Herbal"],
+        "story": "The Corpse Reviver No. 2 is a classic cocktail that is known for its strong and complex flavors. It is a revival cocktail that was originally intended as a hangover cure."
       }
     ]
   }

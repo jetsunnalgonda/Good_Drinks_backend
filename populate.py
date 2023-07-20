@@ -1,29 +1,45 @@
-import sqlite3
 import json
+import sqlite3
 
-# Read the JSON file
-with open('drinks.json', 'r') as file:
-    data = json.load(file)
+# Load the JSON data
+with open('drinks.json', 'r') as json_file:
+    data = json.load(json_file)
 
-# Extract the list of drinks
+# Extract the drinks list from the JSON
 drinks = data['drinks']
 
+# Define the SQLite database path
+database_path = 'drinks.db'
+
 # Connect to the SQLite database
-conn = sqlite3.connect('data.db')
-cursor = conn.cursor()
+conn = sqlite3.connect(database_path)
+c = conn.cursor()
 
 # Create a table for drinks
-cursor.execute('CREATE TABLE IF NOT EXISTS drinks (id INTEGER PRIMARY KEY, name TEXT, ingredients TEXT, glass TEXT, instructions TEXT)')
+c.execute('''CREATE TABLE IF NOT EXISTS drinks
+             (id INTEGER PRIMARY KEY AUTOINCREMENT,
+             name TEXT,
+             ingredients TEXT,
+             glass TEXT,
+             instructions TEXT,
+             flavors TEXT,
+             story TEXT)''')
 
-# Insert each drink into the table
+# Insert each drink into the drinks table
 for drink in drinks:
+    # Extract the drink attributes
+    # item = drink['ingredients']
+
     name = drink['name']
-    ingredients = ', '.join(drink['ingredients'])
+    ingredients = json.dumps({item['name']: item['measurement'] for item in drink['ingredients']})
     glass = drink['glass']
     instructions = drink['instructions']
+    flavors = ', '.join(drink['flavors'])
+    story = drink['story']
 
-    # Insert the drink into the table
-    cursor.execute('INSERT INTO drinks (name, ingredients, glass, instructions) VALUES (?, ?, ?, ?)', (name, ingredients, glass, instructions))
+    # Insert the drink into the drinks table
+    c.execute("INSERT INTO drinks (name, ingredients, glass, instructions, flavors, story) VALUES (?, ?, ?, ?, ?, ?)",
+              (name, ingredients, glass, instructions, flavors, story))
 
 # Commit the changes and close the connection
 conn.commit()
