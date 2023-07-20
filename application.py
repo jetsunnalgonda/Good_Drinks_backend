@@ -99,7 +99,7 @@ def get_featured_drinks():
                 'ingredients': ingredients_json,
                 'glass': row[3],
                 'instructions': row[4],
-                'flavors': row[5].split(','),  # Split the flavors string to get a list of flavors
+                'flavors': row[5], #.split(','),  # Split the flavors string to get a list of flavors
                 'story': row[6],
                 # Add more properties as needed
             }
