@@ -5,6 +5,7 @@ from socket import gethostname
 import sqlite3
 import random
 import os
+import json
 
 app = Flask(__name__, template_folder = 'templates')
 DATABASE = 'drinks.db'
@@ -46,7 +47,29 @@ def get_all_drinks():
     c.execute("SELECT * FROM drinks")
     rows = c.fetchall()
     conn.close()
-    drinks = [{'id': row[0], 'name': row[1], 'ingredients': row[2], 'glass': row[3], 'instructions': row[4], 'flavors': row[5], 'story': row[6]} for row in rows]
+    
+    # Convert the JSON string in the "ingredients" field to a list of dictionaries
+    drinks = []
+    for row in rows:
+        drink = {
+            'id': row[0],
+            'name': row[1],
+            'glass': row[3],
+            'instructions': row[4],
+            'story': row[6]
+        }
+        # Parse the JSON string and convert it to a list of dictionaries
+        ingredients_json = row[2]
+        ingredients_list = json.loads(ingredients_json)
+        drink['ingredients'] = ingredients_list
+        
+        # Split the flavors string to get a list of flavors
+        flavors_string = row[5]
+        flavors_list = flavors_string.split(',')
+        drink['flavors'] = flavors_list
+        
+        drinks.append(drink)
+    
     return jsonify(drinks)
 
 # Get the featured drinks
@@ -65,14 +88,16 @@ def get_featured_drinks():
         c.execute("SELECT * FROM drinks WHERE id=?", (drink_id,))
         row = c.fetchone()
         if row:
+            ingredients_dict = json.loads(row[2])
+
             # Create a dictionary representing the drink and add it to the list
             drink = {
                 'id': row[0],
                 'name': row[1],
-                'ingredients': row[2],
+                'ingredients': ingredients_dict,
                 'glass': row[3],
                 'instructions': row[4],
-                'flavors': row[5],
+                'flavors': row[5].split(','),  # Split the flavors string to get a list of flavors
                 'story': row[6],
                 # Add more properties as needed
             }
@@ -145,7 +170,19 @@ def get_random_drink():
     conn.close()
     if rows:
         random_row = random.choice(rows)
-        drink = {'id': random_row[0], 'name': random_row[1], 'ingredients': random_row[2], 'glass': random_row[3], 'instructions': random_row[4], 'flavors': random_row[5], 'story': random_row[6]}
+        drink = {
+            'id': random_row[0],
+            'name': random_row[1],
+            'glass': random_row[3],
+            'instructions': random_row[4],
+            'flavors': json.loads(random_row[5]),  # Convert the flavors from JSON string to a list
+            'story': random_row[6]
+        }
+
+        # Parse the ingredients from JSON string to a dictionary
+        ingredients_json = json.loads(random_row[2])
+        ingredients_dict = {item['name']: item['measurement'] for item in ingredients_json}
+        drink['ingredients'] = ingredients_dict
         return jsonify(drink)
     return jsonify({'message': 'No drinks found'}), 404
 
