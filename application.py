@@ -88,13 +88,14 @@ def get_featured_drinks():
         c.execute("SELECT * FROM drinks WHERE id=?", (drink_id,))
         row = c.fetchone()
         if row:
-            ingredients_dict = json.dumps(row[2])
-
+            ingredients_json = json.loads(row[2])
+            ingredients_list = [{"name": item['name'], "measurement": item['measurement']} for item in ingredients_json]
+        
             # Create a dictionary representing the drink and add it to the list
             drink = {
                 'id': row[0],
                 'name': row[1],
-                'ingredients': ingredients_dict,
+                'ingredients': ingredients_list,
                 'glass': row[3],
                 'instructions': row[4],
                 'flavors': row[5].split(','),  # Split the flavors string to get a list of flavors
