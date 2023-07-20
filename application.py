@@ -21,7 +21,10 @@ def create_table():
                  name TEXT,
                  ingredients TEXT,
                  glass TEXT,
-                 instructions TEXT)''')
+                 instructions TEXT,
+                 flavors TEXT,
+                 story TEXT)''')
+
     conn.commit()
     conn.close()
 
@@ -43,7 +46,7 @@ def get_all_drinks():
     c.execute("SELECT * FROM drinks")
     rows = c.fetchall()
     conn.close()
-    drinks = [{'id': row[0], 'name': row[1], 'ingredients': row[2], 'glass': row[3], 'instructions': row[4]} for row in rows]
+    drinks = [{'id': row[0], 'name': row[1], 'ingredients': row[2], 'glass': row[3], 'instructions': row[4], 'flavors': row[5], 'story': row[6]} for row in rows]
     return jsonify(drinks)
 
 # Get the featured drinks
@@ -66,9 +69,11 @@ def get_featured_drinks():
             drink = {
                 'id': row[0],
                 'name': row[1],
-                'glass': row[2],
-                'instructions': row[3],
-                'ingredients': row[4],
+                'ingredients': row[2],
+                'glass': row[3],
+                'instructions': row[4],
+                'flavors': row[5],
+                'story': row[6],
                 # Add more properties as needed
             }
             featured_drinks.append(drink)
@@ -140,7 +145,7 @@ def get_random_drink():
     conn.close()
     if rows:
         random_row = random.choice(rows)
-        drink = {'id': random_row[0], 'name': random_row[1], 'ingredients': random_row[2], 'glass': random_row[3], 'instructions': random_row[4]}
+        drink = {'id': random_row[0], 'name': random_row[1], 'ingredients': random_row[2], 'glass': random_row[3], 'instructions': random_row[4], 'flavors': random_row[5], 'story': random_row[6]}
         return jsonify(drink)
     return jsonify({'message': 'No drinks found'}), 404
 
@@ -153,7 +158,7 @@ def get_drink(drink_id):
     row = c.fetchone()
     conn.close()
     if row:
-        drink = {'id': row[0], 'name': row[1], 'ingredients': row[2], 'glass': row[3], 'instructions': row[4]}
+        drink = {'id': row[0], 'name': row[1], 'ingredients': row[2], 'glass': row[3], 'instructions': row[4], 'flavors': row[5], 'story': row[6]}
         return jsonify(drink)
     return jsonify({'message': 'Drink not found'}), 404
 
