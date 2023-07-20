@@ -177,14 +177,15 @@ def get_random_drink():
             'name': random_row[1],
             'glass': random_row[3],
             'instructions': random_row[4],
-            'flavors': json.loads(random_row[5]),  # Convert the flavors from JSON string to a list
+            # 'flavors': json.loads(random_row[5]),  # Convert the flavors from JSON string to a list
+            'flavors': random_row[5].split(','),
             'story': random_row[6]
         }
 
         # Parse the ingredients from JSON string to a dictionary
         ingredients_json = json.loads(random_row[2])
-        ingredients_dict = {item['name']: item['measurement'] for item in ingredients_json}
-        drink['ingredients'] = ingredients_dict
+        # ingredients_dict = {item['name']: item['measurement'] for item in ingredients_json}
+        drink['ingredients'] = ingredients_json
         return jsonify(drink)
     return jsonify({'message': 'No drinks found'}), 404
 
