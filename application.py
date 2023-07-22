@@ -65,7 +65,8 @@ def get_all_drinks():
         
         # Split the flavors string to get a list of flavors
         flavors_string = row[5]
-        flavors_list = flavors_string.split(',')
+        # flavors_list = flavors_string.split(',')
+        flavors_list = [flavor.strip() for flavor in flavors_string.split(',')]
         drink['flavors'] = flavors_list
         
         drinks.append(drink)
@@ -92,6 +93,9 @@ def get_featured_drinks():
             # ingredients_list = [{"name": item['name'], "measurement": item['measurement']} for item in ingredients_json]
             # ingredients = [{"name": k, "measurement": v} for k, v in ingredients_list.items()]
         
+            flavors_string = row[5]
+            flavors_list = [flavor.strip() for flavor in flavors_string.split(',')]
+        
             # Create a dictionary representing the drink and add it to the list
             drink = {
                 'id': row[0],
@@ -99,7 +103,8 @@ def get_featured_drinks():
                 'ingredients': ingredients_json,
                 'glass': row[3],
                 'instructions': row[4],
-                'flavors': row[5].split(','),  # Split the flavors string to get a list of flavors
+                'flavors': flavors_list,
+                # 'flavors': row[5].split(','),  # Split the flavors string to get a list of flavors
                 'story': row[6],
                 # Add more properties as needed
             }
@@ -173,6 +178,9 @@ def get_random_drink():
     if rows:
         random_row = random.choice(rows)
         ingredients_json = json.loads(random_row[2])
+        flavors_string = random_row[5]
+        flavors_list = [flavor.strip() for flavor in flavors_string.split(',')]
+
         drink = {
             'id': random_row[0],
             'name': random_row[1],
@@ -180,7 +188,8 @@ def get_random_drink():
             'glass': random_row[3],
             'instructions': random_row[4],
             # 'flavors': json.loads(random_row[5]),  # Convert the flavors from JSON string to a list
-            'flavors': random_row[5].split(','),
+            # 'flavors': random_row[5].split(','),
+            'flavors' : flavors_list,
             'story': random_row[6]
         }
 
