@@ -210,7 +210,9 @@ def get_drink(drink_id):
     conn.close()
     if row:
         ingredients_json = json.loads(row[2])
-        drink = {'id': row[0], 'name': row[1], 'ingredients': ingredients_json, 'glass': row[3], 'instructions': row[4], 'flavors': row[5].split(','), 'story': row[6]}
+        flavors_string = random_row[5]
+        flavors_list = [flavor.strip() for flavor in flavors_string.split(',')]
+        drink = {'id': row[0], 'name': row[1], 'ingredients': ingredients_json, 'glass': row[3], 'instructions': row[4], 'flavors': flavors_list, 'story': row[6]}
         return jsonify(drink)
     return jsonify({'message': 'Drink not found'}), 404
 
