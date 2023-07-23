@@ -4,7 +4,7 @@
         "name": "Mojito",
         "ingredients": [
           {
-            "name": "white rum",
+            "base": "white rum",
             "measurement": "2 oz"
           },
           {
@@ -33,7 +33,7 @@
         "name": "Old Fashioned",
         "ingredients": [
           {
-            "name": "bourbon",
+            "base": "bourbon",
             "measurement": "2 oz"
           },
           {
@@ -62,7 +62,7 @@
         "name": "Cosmopolitan",
         "ingredients": [
           {
-            "name": "vodka",
+            "base": "vodka",
             "measurement": "1.5 oz"
           },
           {
@@ -70,7 +70,7 @@
             "measurement": "1 oz"
           },
           {
-            "name": "triple sec",
+            "base": "triple sec",
             "measurement": "0.5 oz"
           },
           {
@@ -87,7 +87,7 @@
         "name": "Margarita",
         "ingredients": [
           {
-            "name": "tequila",
+            "base": "tequila",
             "measurement": "2 oz"
           },
           {
@@ -95,7 +95,7 @@
             "measurement": "1 oz"
           },
           {
-            "name": "triple sec",
+            "base": "triple sec",
             "measurement": "1 oz"
           },
           {
@@ -112,15 +112,15 @@
         "name": "Negroni",
         "ingredients": [
           {
-            "name": "gin",
+            "base": "gin",
             "measurement": "1 oz"
           },
           {
-            "name": "sweet vermouth",
+            "base": "sweet vermouth",
             "measurement": "1 oz"
           },
           {
-            "name": "Campari",
+            "base": "Campari",
             "measurement": "1 oz"
           },
           {
@@ -137,11 +137,11 @@
         "name": "Martini",
         "ingredients": [
           {
-            "name": "gin",
+            "base": "gin",
             "measurement": "2.5 oz"
           },
           {
-            "name": "dry vermouth",
+            "base": "dry vermouth",
             "measurement": "0.5 oz"
           },
           {
@@ -158,7 +158,7 @@
         "name": "Whiskey Sour",
         "ingredients": [
           {
-            "name": "whiskey",
+            "base": "whiskey",
             "measurement": "2 oz"
           },
           {
@@ -187,7 +187,7 @@
         "name": "Piña Colada",
         "ingredients": [
           {
-            "name": "rum",
+            "base": "rum",
             "measurement": "2 oz"
           },
           {
@@ -216,7 +216,7 @@
         "name": "Screwdriver",
         "ingredients": [
           {
-            "name": "vodka",
+            "base": "vodka",
             "measurement": "2 oz"
           },
           {
@@ -237,23 +237,23 @@
         "name": "Long Island Iced Tea",
         "ingredients": [
           {
-            "name": "vodka",
+            "base": "vodka",
             "measurement": "0.5 oz"
           },
           {
-            "name": "tequila",
+            "base": "tequila",
             "measurement": "0.5 oz"
           },
           {
-            "name": "rum",
+            "base": "rum",
             "measurement": "0.5 oz"
           },
           {
-            "name": "gin",
+            "base": "gin",
             "measurement": "0.5 oz"
           },
           {
-            "name": "triple sec",
+            "base": "triple sec",
             "measurement": "0.5 oz"
           },
           {
@@ -282,7 +282,7 @@
         "name": "Daiquiri",
         "ingredients": [
           {
-            "name": "rum",
+            "base": "rum",
             "measurement": "2 oz"
           },
           {
@@ -303,7 +303,7 @@
         "name": "Gin and Tonic",
         "ingredients": [
           {
-            "name": "gin",
+            "base": "gin",
             "measurement": "2 oz"
           },
           {
@@ -324,11 +324,11 @@
         "name": "White Russian",
         "ingredients": [
           {
-            "name": "vodka",
+            "base": "vodka",
             "measurement": "1.5 oz"
           },
           {
-            "name": "coffee liqueur",
+            "base": "coffee liqueur",
             "measurement": "0.75 oz"
           },
           {
@@ -345,7 +345,7 @@
         "name": "Mai Tai",
         "ingredients": [
           {
-            "name": "rum",
+            "base": "rum",
             "measurement": "2 oz"
           },
           {
@@ -353,7 +353,7 @@
             "measurement": "1 oz"
           },
           {
-            "name": "orange curaçao",
+            "base": "orange curaçao",
             "measurement": "0.5 oz"
           },
           {
@@ -361,7 +361,7 @@
             "measurement": "0.5 oz"
           },
           {
-            "name": "dark rum",
+            "base": "dark rum",
             "measurement": "0.5 oz"
           },
           {
@@ -386,7 +386,7 @@
         "name": "Bloody Mary",
         "ingredients": [
           {
-            "name": "vodka",
+            "base": "vodka",
             "measurement": "1.5 oz"
           },
           {
@@ -431,7 +431,7 @@
         "name": "Mimosa",
         "ingredients": [
           {
-            "name": "champagne",
+            "base": "champagne",
             "measurement": "2 oz"
           },
           {
@@ -448,7 +448,7 @@
         "name": "Sangria",
         "ingredients": [
           {
-            "name": "red wine",
+            "base": "red wine",
             "measurement": "4 oz"
           },
           {
@@ -456,7 +456,7 @@
             "measurement": "2 oz"
           },
           {
-            "name": "brandy",
+            "base": "brandy",
             "measurement": "1 oz"
           },
           {
@@ -481,7 +481,7 @@
         "name": "Caipirinha",
         "ingredients": [
           {
-            "name": "cachaça",
+            "base": "cachaça",
             "measurement": "2 oz"
           },
           {
@@ -502,7 +502,7 @@
         "name": "Amaretto Sour",
         "ingredients": [
           {
-            "name": "amaretto",
+            "base": "amaretto",
             "measurement": "1.5 oz"
           },
           {
@@ -531,7 +531,7 @@
         "name": "Mint Julep",
         "ingredients": [
           {
-            "name": "bourbon",
+            "base": "bourbon",
             "measurement": "2.5 oz"
           },
           {
@@ -556,7 +556,7 @@
         "name": "Sazerac",
         "ingredients": [
           {
-            "name": "rye whiskey",
+            "base": "rye whiskey",
             "measurement": "2 oz"
           },
           {
@@ -568,7 +568,7 @@
             "measurement": "2 dashes"
           },
           {
-            "name": "absinthe",
+            "base": "absinthe",
             "measurement": "1 tsp"
           },
           {
@@ -585,7 +585,7 @@
         "name": "Pisco Sour",
         "ingredients": [
           {
-            "name": "pisco",
+            "base": "pisco",
             "measurement": "2 oz"
           },
           {
@@ -614,7 +614,7 @@
         "name": "Irish Coffee",
         "ingredients": [
           {
-            "name": "Irish whiskey",
+            "base": "Irish whiskey",
             "measurement": "1.5 oz"
           },
           {
@@ -643,7 +643,7 @@
             "measurement": "2 oz"
           },
           {
-            "name": "prosecco",
+            "base": "prosecco",
             "measurement": "4 oz"
           }
         ],
@@ -656,7 +656,7 @@
         "name": "Whiskey Smash",
         "ingredients": [
           {
-            "name": "bourbon",
+            "base": "bourbon",
             "measurement": "2 oz"
           },
           {
@@ -685,11 +685,11 @@
         "name": "Aperol Spritz",
         "ingredients": [
           {
-            "name": "Aperol",
+            "base": "Aperol",
             "measurement": "2 oz"
           },
           {
-            "name": "prosecco",
+            "base": "prosecco",
             "measurement": "3 oz"
           },
           {
@@ -710,11 +710,11 @@
         "name": "Dark 'n' Stormy",
         "ingredients": [
           {
-            "name": "dark rum",
+            "base": "dark rum",
             "measurement": "2 oz"
           },
           {
-            "name": "ginger beer",
+            "base": "ginger beer",
             "measurement": "4 oz"
           },
           {
@@ -731,11 +731,11 @@
         "name": "Sidecar",
         "ingredients": [
           {
-            "name": "cognac",
+            "base": "cognac",
             "measurement": "1.5 oz"
           },
           {
-            "name": "triple sec",
+            "base": "triple sec",
             "measurement": "0.75 oz"
           },
           {
@@ -756,7 +756,7 @@
         "name": "Gimlet",
         "ingredients": [
           {
-            "name": "gin",
+            "base": "gin",
             "measurement": "2 oz"
           },
           {
@@ -781,7 +781,7 @@
         "name": "French 75",
         "ingredients": [
           {
-            "name": "gin",
+            "base": "gin",
             "measurement": "1.5 oz"
           },
           {
@@ -793,7 +793,7 @@
             "measurement": "0.5 oz"
           },
           {
-            "name": "champagne",
+            "base": "champagne",
             "measurement": "2 oz"
           },
           {
@@ -810,7 +810,7 @@
         "name": "Tom Collins",
         "ingredients": [
           {
-            "name": "gin",
+            "base": "gin",
             "measurement": "2 oz"
           },
           {
@@ -843,15 +843,15 @@
         "name": "Corpse Reviver No. 2",
         "ingredients": [
           {
-            "name": "gin",
+            "base": "gin",
             "measurement": "1 oz"
           },
           {
-            "name": "Lillet Blanc",
+            "base": "Lillet Blanc",
             "measurement": "1 oz"
           },
           {
-            "name": "Cointreau",
+            "base": "Cointreau",
             "measurement": "1 oz"
           },
           {
@@ -859,7 +859,7 @@
             "measurement": "1 oz"
           },
           {
-            "name": "absinthe",
+            "base": "absinthe",
             "measurement": "1 dash"
           },
           {

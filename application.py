@@ -116,6 +116,33 @@ def get_featured_drinks():
     # Return the featured drinks as a JSON response
     return jsonify(featured_drinks)
 
+# Endpoint to get unique bases from 'drinks.json'
+@app.route('/api/drinks/bases', methods=['GET'])
+def get_unique_bases():
+    # Load the JSON data
+    with open('drinks.json', 'r') as json_file:
+        data = json.load(json_file)
+
+    # Get the list of drinks from the data
+    drinks = data['drinks']
+
+    # Create a set to store the unique bases
+    unique_bases = set()
+
+    # Extract the bases from the ingredients and store them in a set to get unique bases
+    for drink in drinks:
+        ingredients = drink['ingredients']
+        for ingredient in ingredients:
+            base = ingredient.get("base")
+            if base:
+                unique_bases.add(base)
+
+    # Convert the set of unique bases to a list
+    base_list = list(unique_bases)
+
+    # Return the unique bases as JSON response
+    return jsonify(base_list)
+
 # Get drink image
 @app.route('/api/drinks/image/<drink_id>', methods=['GET'])
 def get_drink_image(drink_id):
